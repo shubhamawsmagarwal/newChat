@@ -4,7 +4,7 @@ import Room from './Room';
 import Chat from './Chat';
 import User from './User';
 class App extends Component{
-  ws = new WebSocket("wss://mnccesorvk.execute-api.us-east-1.amazonaws.com/a");
+  ws = new WebSocket("");
   componentDidMount() {
      this.ws.onopen = evt => {
       this.setState({loading:false});
@@ -33,7 +33,7 @@ class App extends Component{
       loading:true,
       onlineUsers:[],
       messages:[],
-      url:"https://4l8zeclpe0.execute-api.us-east-1.amazonaws.com/a"
+      url:""
     };
     this.checkUsername=this.checkUsername.bind(this);
     this.createRoom=this.createRoom.bind(this);
